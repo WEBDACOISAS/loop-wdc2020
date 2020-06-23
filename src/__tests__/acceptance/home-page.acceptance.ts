@@ -1,9 +1,9 @@
 import {Client} from '@loopback/testlab';
-import {MiotApplication} from '../..';
+import {WdcApplication} from '../..';
 import {setupApplication} from './test-helper';
 
 describe('HomePage', () => {
-  let app: MiotApplication;
+  let app: WdcApplication;
   let client: Client;
 
   before('setupApplication', async () => {

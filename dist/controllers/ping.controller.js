@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PingController = void 0;
 const tslib_1 = require("tslib");
 const rest_1 = require("@loopback/rest");
-const context_1 = require("@loopback/context");
+const core_1 = require("@loopback/core");
 /**
  * OpenAPI response for ping()
  */
@@ -58,7 +59,7 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Object)
 ], PingController.prototype, "ping", null);
 PingController = tslib_1.__decorate([
-    tslib_1.__param(0, context_1.inject(rest_1.RestBindings.Http.REQUEST)),
+    tslib_1.__param(0, core_1.inject(rest_1.RestBindings.Http.REQUEST)),
     tslib_1.__metadata("design:paramtypes", [Object])
 ], PingController);
 exports.PingController = PingController;

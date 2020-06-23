@@ -1,6 +1,7 @@
 import { ApplicationConfig } from '@loopback/core';
 import { RestApplication } from '@loopback/rest';
-declare const MiotApplication_base: (new (...args: any[]) => {
+export { ApplicationConfig };
+declare const WdcApplication_base: (new (...args: any[]) => {
     projectRoot: string;
     bootOptions?: import("@loopback/boot").BootOptions | undefined;
     boot(): Promise<void>;
@@ -241,7 +242,6 @@ declare const MiotApplication_base: (new (...args: any[]) => {
     eventNames: () => (string | symbol)[];
     listenerCount: (type: string | symbol) => number;
 }) & typeof RestApplication;
-export declare class MiotApplication extends MiotApplication_base {
+export declare class WdcApplication extends WdcApplication_base {
     constructor(options?: ApplicationConfig);
 }
-export {};

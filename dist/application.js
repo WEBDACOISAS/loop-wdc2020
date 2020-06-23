@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.WdcApplication = void 0;
 const tslib_1 = require("tslib");
 const boot_1 = require("@loopback/boot");
 const rest_explorer_1 = require("@loopback/rest-explorer");
@@ -8,7 +9,7 @@ const rest_1 = require("@loopback/rest");
 const service_proxy_1 = require("@loopback/service-proxy");
 const path_1 = tslib_1.__importDefault(require("path"));
 const sequence_1 = require("./sequence");
-class MiotApplication extends boot_1.BootMixin(service_proxy_1.ServiceMixin(repository_1.RepositoryMixin(rest_1.RestApplication))) {
+class WdcApplication extends boot_1.BootMixin(service_proxy_1.ServiceMixin(repository_1.RepositoryMixin(rest_1.RestApplication))) {
     constructor(options = {}) {
         super(options);
         // Set up the custom sequence
@@ -32,5 +33,5 @@ class MiotApplication extends boot_1.BootMixin(service_proxy_1.ServiceMixin(repo
         };
     }
 }
-exports.MiotApplication = MiotApplication;
+exports.WdcApplication = WdcApplication;
 //# sourceMappingURL=application.js.map

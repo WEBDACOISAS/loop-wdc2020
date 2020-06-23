@@ -1,10 +1,10 @@
-import {MiotApplication} from './application';
+import {WdcApplication} from './application';
 
 export async function migrate(args: string[]) {
   const existingSchema = args.includes('--rebuild') ? 'drop' : 'alter';
   console.log('Migrating schemas (%s existing schema)', existingSchema);
 
-  const app = new MiotApplication();
+  const app = new WdcApplication();
   await app.boot();
   await app.migrateSchema({existingSchema});
 

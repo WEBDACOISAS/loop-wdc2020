@@ -1,1 +1,1 @@
-export * from './miot.datasource';
+export * from './wdc2020.datasource';

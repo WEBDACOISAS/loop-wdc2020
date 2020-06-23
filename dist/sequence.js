@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MySequence = void 0;
 const tslib_1 = require("tslib");
-const context_1 = require("@loopback/context");
+const core_1 = require("@loopback/core");
 const rest_1 = require("@loopback/rest");
 const SequenceActions = rest_1.RestBindings.SequenceActions;
 let MySequence = class MySequence {
@@ -34,15 +35,15 @@ let MySequence = class MySequence {
     }
 };
 tslib_1.__decorate([
-    context_1.inject(SequenceActions.INVOKE_MIDDLEWARE, { optional: true }),
+    core_1.inject(SequenceActions.INVOKE_MIDDLEWARE, { optional: true }),
     tslib_1.__metadata("design:type", Function)
 ], MySequence.prototype, "invokeMiddleware", void 0);
 MySequence = tslib_1.__decorate([
-    tslib_1.__param(0, context_1.inject(SequenceActions.FIND_ROUTE)),
-    tslib_1.__param(1, context_1.inject(SequenceActions.PARSE_PARAMS)),
-    tslib_1.__param(2, context_1.inject(SequenceActions.INVOKE_METHOD)),
-    tslib_1.__param(3, context_1.inject(SequenceActions.SEND)),
-    tslib_1.__param(4, context_1.inject(SequenceActions.REJECT)),
+    tslib_1.__param(0, core_1.inject(SequenceActions.FIND_ROUTE)),
+    tslib_1.__param(1, core_1.inject(SequenceActions.PARSE_PARAMS)),
+    tslib_1.__param(2, core_1.inject(SequenceActions.INVOKE_METHOD)),
+    tslib_1.__param(3, core_1.inject(SequenceActions.SEND)),
+    tslib_1.__param(4, core_1.inject(SequenceActions.REJECT)),
     tslib_1.__metadata("design:paramtypes", [Function, Function, Function, Function, Function])
 ], MySequence);
 exports.MySequence = MySequence;

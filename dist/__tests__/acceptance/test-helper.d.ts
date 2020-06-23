@@ -1,7 +1,7 @@
-import { MiotApplication } from '../..';
+import { WdcApplication } from '../..';
 import { Client } from '@loopback/testlab';
 export declare function setupApplication(): Promise<AppWithClient>;
 export interface AppWithClient {
-    app: MiotApplication;
+    app: WdcApplication;
     client: Client;
 }

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.setupApplication = void 0;
 const __1 = require("../..");
 const testlab_1 = require("@loopback/testlab");
 async function setupApplication() {
@@ -10,7 +11,7 @@ async function setupApplication() {
     // host: process.env.HOST,
     // port: +process.env.PORT,
     });
-    const app = new __1.MiotApplication({
+    const app = new __1.WdcApplication({
         rest: restConfig,
     });
     await app.boot();

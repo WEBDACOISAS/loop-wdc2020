@@ -10,7 +10,9 @@ import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {MySequence} from './sequence';
 
-export class MiotApplication extends BootMixin(
+export {ApplicationConfig};
+
+export class WdcApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
   constructor(options: ApplicationConfig = {}) {

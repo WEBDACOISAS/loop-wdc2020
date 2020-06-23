@@ -1,6 +1,6 @@
 import {DefaultCrudRepository} from '@loopback/repository';
 import {Client, ClientRelations} from '../models';
-import {MiotDataSource} from '../datasources';
+import {Wdc2020DataSource} from '../datasources';
 import {inject} from '@loopback/core';
 
 export class ClientRepository extends DefaultCrudRepository<
@@ -9,7 +9,7 @@ export class ClientRepository extends DefaultCrudRepository<
   ClientRelations
 > {
   constructor(
-    @inject('datasources.miot') dataSource: MiotDataSource,
+    @inject('datasources.wdc2020') dataSource: Wdc2020DataSource,
   ) {
     super(Client, dataSource);
   }
